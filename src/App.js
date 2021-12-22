@@ -1,7 +1,6 @@
 import Row from './Row';
-
-const Block = require('./Block');
-const Chain = require('./Chain');
+import Block from './Block';
+import Chain from './Chain';
 
 function App() {
 
@@ -10,15 +9,16 @@ function App() {
   chain.addNewBlock(new Block(1, Date.now(), 'Page 2....'));
   chain.addNewBlock(new Block(2, Date.now(), 'Page 3....'));
 
-  console.log(chain.allBlocks());
+  // console.log(chain.allBlocks());
 
   return (
     <div className="App">
       <div className="container">
 
-        <div className="row mt-5">
+        <div className="row mt-5 text-center">
           <div className="col-12">
-            <h1>Blockchain Node</h1>
+            <img src="https://assets.edlin.app/logo/logo-symbol-dark.png" height='100'/>
+            <h1 className='mt-5'>Blockchain Node</h1>
           </div>
         </div>
 

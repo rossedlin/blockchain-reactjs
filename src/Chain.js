@@ -1,6 +1,6 @@
-const Block  = require('./Block');
+import Block from './Block';
 
-module.exports = class Chain {
+export default class Chain {
   constructor() {
     this.chain = [this.initGenesisBlock()];
   }
@@ -18,7 +18,7 @@ module.exports = class Chain {
   }
 
   addNewBlock(newBlock) {
-    newBlock.nextHash = this.latestBlock().hash;
+    newBlock.prevHash = this.latestBlock().hash;
     newBlock.hash     = newBlock.computeHash();
     this.chain.push(newBlock);
   }
@@ -35,7 +35,7 @@ module.exports = class Chain {
       }
 
       // Comparing current block hash with the next block
-      if (currentBlock.nextHash !== nextBlock.hash) {
+      if (currentBlock.prevHash !== nextBlock.hash) {
         return false;
       }
 

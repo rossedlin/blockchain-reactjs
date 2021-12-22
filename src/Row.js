@@ -5,13 +5,13 @@ import React from 'react';
  * @return {JSX.Element}
  * @constructor
  */
-function Row({block}) {
+export default function Row({block}) {
 
   const dayjs = require('dayjs');
 
   console.log(block);
 
-  const {index, content, current_time, hash, nextHash} = block;
+  const {index, content, current_time, hash, prevHash} = block;
 
   return (
     <tr>
@@ -29,15 +29,13 @@ function Row({block}) {
       </td>
       <td>
         <button type="button"
-                className="btn btn-primary"
+                className="btn btn-success"
                 data-bs-toggle="tooltip"
                 data-bs-placement="top"
                 title="Tooltip on top">
-          {nextHash.toString().substring(0, 8)}
+          {prevHash.toString().substring(0, 8)}
         </button>
       </td>
     </tr>
   );
 }
-
-export default Row;
