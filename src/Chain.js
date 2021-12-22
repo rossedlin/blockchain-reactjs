@@ -13,6 +13,10 @@ module.exports = class Chain {
     return this.chain[this.chain.length - 1];
   }
 
+  allBlocks() {
+    return this.chain;
+  }
+
   addNewBlock(newBlock) {
     newBlock.nextHash = this.latestBlock().hash;
     newBlock.hash     = newBlock.computeHash();
