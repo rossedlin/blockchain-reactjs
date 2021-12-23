@@ -23,6 +23,26 @@ export default class Chain {
     this.chain.push(newBlock);
   }
 
+  updateBlock(block) {
+    for (let i = 0; i < this.chain.length; i++) {
+      if (this.chain[i].index === block.index) {
+        this.chain[i] = block;
+      }
+    }
+
+    this.computeHashes();
+  }
+
+  computeHashes() {
+    for (let i = 0; i < this.chain.length; i++) {
+      this.chain[i].hash     = this.chain[i].computeHash();
+
+      if (this.chain[i+1] !== undefined) {
+        this.chain[i+1].prevHash = this.chain[i].hash;
+      }
+    }
+  }
+
   checkValidity() {
     // Checking validity
     for (let i = 1; i < this.chain.length; i++) {
