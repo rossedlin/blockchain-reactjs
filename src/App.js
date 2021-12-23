@@ -1,6 +1,6 @@
-import Row from './Row';
-import Block from './Block';
-import Chain from './Chain';
+import Row from './components/Row';
+import Block from './components/Block';
+import Chain from './components/Chain';
 
 function App() {
 
