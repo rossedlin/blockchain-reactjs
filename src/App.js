@@ -34,7 +34,7 @@ class App extends React.Component {
           <div className="row mt-5 text-center">
             <div className="col-12">
               <img src="https://assets.edlin.app/logo/logo-symbol-dark.png" height="100"/>
-              <h1 className="mt-5">Blockchain Node</h1>
+              <h1 className="mt-5">Blockchain ReactJS</h1>
             </div>
 
             <div className="col-12 col-md-6 offset-md-3 mt-2">
@@ -42,10 +42,10 @@ class App extends React.Component {
 
               <p>My purpose is to demonstrate building a <a
                 href="https://en.wikipedia.org/wiki/Blockchain">blockchain</a>
-                &nbsp;using <a href="https://nodejs.org/en/" target="_blank">NodeJs</a> in 5 minutes.
+                &nbsp;using <a href="https://react.dev/" target="_blank">ReactJS</a> in 5 minutes.
               </p>
 
-              <p>You can check my source code <a href="https://github.com/rossedlin/blockchain-node"
+              <p>You can check my source code <a href="https://github.com/rossedlin/blockchain-reactjs"
                                                  target="_blank">here</a>.
               </p>
             </div>
